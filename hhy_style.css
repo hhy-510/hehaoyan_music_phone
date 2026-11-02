@@ -1,0 +1,131 @@
+/* 音乐手机选项卡模块样式（类名统一 hhy_ 前缀） */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #fff;
+  font-family: "SimSun", "宋体", serif;
+}
+
+/* 模块外框：顶部浅蓝色线 */
+.hhy_music-module {
+  width: 360px;
+  margin: 0 auto;
+  border-top: 2px solid #9ec8ee;
+  background: #fff;
+}
+
+/* 标题与选项卡所在的一行，底部使用 bg20.gif 形成蓝色分隔线 */
+.hhy_music-module__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 34px;
+  padding: 0 16px 1px;
+  background: url("hhy_img/bg20.gif") repeat-x left bottom;
+}
+
+.hhy_music-module__title {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+/* 选项卡导航 */
+.hhy_music-tabs {
+  display: flex;
+}
+
+.hhy_music-tab {
+  width: 49px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-left: 0;
+  background: url("hhy_img/bg21.gif") repeat-x left top;
+  color: #333;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hhy_music-tab:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.hhy_music-tab:hover {
+  color: #0066cc;
+}
+
+.hhy_music-tab:focus-visible {
+  outline: 2px solid #9ec8ee;
+  outline-offset: -2px;
+}
+
+/* 选中状态：浅蓝底、蓝色边框、蓝色加粗文字 */
+.hhy_music-tab.hhy_is-active {
+  position: relative;
+  z-index: 1;
+  margin-left: -1px;
+  border: 1px solid #9ec8ee;
+  background: url("hhy_img/bg22.gif") repeat-x left top;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* 内容面板 */
+.hhy_music-panel {
+  padding: 8px 10px 12px 16px;
+}
+
+.hhy_music-panel[hidden] {
+  display: none;
+}
+
+.hhy_music-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 列表行：dot.gif 精灵图中的蓝色小方块用于项目符号 */
+.hhy_music-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  padding-left: 14px;
+  background: url("hhy_img/dot.gif") no-repeat 0 -46px;
+  font-size: 12px;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.hhy_music-list li > a {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: #003399;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+/* 悬停：红色并显示下划线 */
+.hhy_music-list li > a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+.hhy_music-date {
+  margin-left: 8px;
+  color: #999;
+  white-space: nowrap;
+}
